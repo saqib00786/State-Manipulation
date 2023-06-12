@@ -40,7 +40,6 @@ const UsingReduxStyle = () => {
   return (
     <div className="App">
       <h1>
-        {" "}
         Maintain React TS Multiple States with useReducer in Redux-ify style
       </h1>
 
