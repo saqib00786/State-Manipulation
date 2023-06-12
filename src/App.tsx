@@ -1,9 +1,9 @@
 import React, { useReducer } from "react";
 import "./App.css";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import SimpleUsingUseReducer from "./SimpleUsingUseReducer";
-import UsingReduxStyle from "./UsingReduxStyle";
-import UserInfo from "./UserInfo";
+import SimpleUsingUseReducer from "./pages/SimpleUsingUseReducer";
+import UsingReduxStyle from "./pages/UsingReduxStyle";
+import UserInfo from "./pages/UserInfo";
 
 function App() {
   return (

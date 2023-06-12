@@ -1,8 +1,10 @@
 import React from 'react'
-
+import '../App.css'
 const UserInfo = () => {
   return (
-    <div>UserInfo</div>
+    <div className='App'>
+      <h1>UserInfo</h1>
+    </div>
   )
 }
 

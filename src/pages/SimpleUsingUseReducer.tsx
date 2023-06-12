@@ -1,6 +1,6 @@
 import React, { useReducer, useState } from "react";
 import { Link } from "react-router-dom";
-import "./App.css";
+import "../App.css";
 
 type State = {
   name: string;
@@ -11,8 +11,8 @@ type Action = Partial<State>;
 
 const SimpleUsingUseReducer = () => {
   // const navigation = useNavigation();
-  const [name, setName] = React.useState<string>("");
-  const [age, setAge] = React.useState<number>(0);
+  // const [name, setName] = React.useState<string>("");
+  // const [age, setAge] = React.useState<number>(0);
 
   const [event, updateEvent] = useReducer(
     (state: State, action: Action) => {
@@ -21,12 +21,12 @@ const SimpleUsingUseReducer = () => {
         ...action,
       };
     },
-    { name, age }
+    { name: "", age: 0 }
   );
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    updateEvent({ name, age })
+    // updateEvent({ name, age });
   };
 
   console.log(event);
@@ -40,13 +40,13 @@ const SimpleUsingUseReducer = () => {
           className="input"
           type="text"
           placeholder="Enter your name"
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => updateEvent({ name: e.target.value })}
         />
         <input
           className="input"
           type="text"
           placeholder="Enter your age"
-          onChange={(e) => setAge(Number(e.target.value))}
+          onChange={(e) => updateEvent({ age: parseInt(e.target.value) })}
         />
         <button type="submit">Submit</button>
       </form>
